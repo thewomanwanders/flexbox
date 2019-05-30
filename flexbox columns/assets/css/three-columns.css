@@ -1,0 +1,175 @@
+/* ==== BROWSER RESETS  ==== */
+* { box-sizing: border-box; padding: 0; margin: 0 }
+body, html { height: 100% }
+body { max-width: 1600px }
+
+
+/* ==== UTILITY CLASS  ==== */
+.img-fluid { width: 100%; height: auto }
+* { margin:0; padding:0; box-sizing: border-box }
+
+
+/* ====== HERO AND FOOTER SECTIONS ======= */
+
+.container-hero, .container-footer { width: 100%; text-align: center }
+
+.container-hero { 
+	background: blue; 
+	margin: 0 auto 5% auto; 
+	padding: 6% 0 6% 0;
+}
+
+.container-footer { 
+	background: #233b53;
+	margin: 0 auto
+}
+
+.container-hero h1, .container-footer p { color: #fff }
+
+.container-hero h1 {
+	font-size: calc(28px + (54 - 28) * ((100vw - 320px) / (1600 - 320))); 
+	font-weight: 800;
+	line-height: 1.4;
+	margin: 0 auto;
+	width: 60%;
+	font-family: 'Montserrat', sans-serif; 
+}
+
+.container-footer p {
+	font-family: sans-serif;
+	margin: 0 auto;
+	padding: 3% 5%;
+	line-height: 1.3;
+	font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1600 - 320))); 
+}
+
+
+
+
+/* === CONTAINERS FOR FLEXBOX GRIDS === */
+
+.container-full { width: 100%; margin: 0 auto }
+
+
+/* Desktop */
+@media all and (min-width:768px) { 
+	.container-wide   { width: 90%; margin: 0 auto 8% auto }
+	.container-narrow { width: 80%; margin: 0 auto 8% auto; max-width: 1070px }
+}
+
+/* Mobiles */
+@media all and (max-width:767px) { 
+	.container-wide   { width: 84%; margin: 0 auto 12% auto }
+	.container-narrow { width: 70%; margin: 0 auto 12% auto }
+}
+
+
+/*  ===== CONTENT WITHIN COLUMNS OF FLEXBOX GRIDS ====*/
+
+.flex-grid-three h2, .flex-grid-three h3 {  
+	font-weight: 700; 
+	color: #183b56;
+	line-height: 1.1;
+}
+
+.flex-grid-three h2 {  
+	font-size: calc(24px + (42 - 24) * ((100vw - 320px) / (1600 - 320))); 
+	margin-bottom: 3%;
+}
+
+.flex-grid-three h3 { 
+	font-weight: 700;
+	font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1600 - 320))); 
+}
+
+.flex-grid-three p { 
+	font-weight: 400;
+	color: #465E72;
+	line-height: 1.5;
+	margin-bottom: 6%;
+	font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1600 - 320))); 
+}
+
+.flex-grid-three button { 
+	font-family: sans-serif;
+	font-weight: bold; 
+	background-color: #000; 
+	color: #fff; 
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	border-width: 0; 
+	font-size: calc(14px + (17 - 14) * ((100vw - 320px) / (1600 - 320))); 
+}
+
+.flex-grid-three .col-no-gutter hr { 
+	margin-bottom: 20px; 
+	width: 20%; 
+	height: 12px; 
+	background-color: #B9995E; 
+	border-width:0
+}
+
+/* Desktop */
+@media all and (min-width:768px) { button { padding: 9px 22px } }
+
+/* Mobiles */
+@media all and (max-width:767px) { button { padding: 7px 14px } }
+
+
+/* Desktop */
+@media all and (min-width:768px) { 
+	.flex-grid-three .col-no-gutter .col-no-gutter-inner {  padding: 0 8% }
+}
+
+/* Mobiles */
+@media all and (max-width:767px) { 
+	.flex-grid-three .col-no-gutter .col-no-gutter-inner {  padding: 4% 9% }
+}
+
+
+/* ==== THREE COLUMN GRID ======= */
+
+.flex-grid-three { display: flex }
+
+/* Desktop */
+@media all and (min-width:768px) { 
+	.flex-grid-three { 
+		flex-direction: row; /* left to right */
+		text-align: left
+	}
+}
+
+/* Mobiles */
+@media all and (max-width:768px) { 
+	.flex-grid-three { 
+		flex-direction: column; /* top to bottom */
+		text-align: center
+	}
+}
+
+/* ==== COLUMNS IN THREE COLUMN GRID ======= */
+
+/* Desktop */
+@media all and (min-width:768px) { 
+	.flex-grid-three .col-gutter { width: 32% }
+
+	.flex-grid-three .col-gutter:nth-child(1) { margin-right: 4% }
+	.flex-grid-three .col-gutter:nth-child(2) { margin-right: 4% }
+	.flex-grid-three .col-gutter:nth-child(3) { margin-right: 0 }
+
+	.flex-grid-three .col-no-gutter { width: 33.3% }
+
+	.flex-grid-three .col-vertical-center { align-self: center }
+}
+
+/* Mobiles */
+@media all and (max-width:768px) { 
+	.flex-grid-three .col-gutter, 
+	.flex-grid-three .col-no-gutter { width: 100% }
+
+	.flex-grid-three .col-no-gutter h2 { margin-top: 5% }
+	.flex-grid-three .col-no-gutter button { margin-bottom: 5% }
+
+}
+
+
